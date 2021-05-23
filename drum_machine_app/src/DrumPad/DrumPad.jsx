@@ -21,13 +21,11 @@ const playAudio = (id) => {
     let string = document.getElementById("display");
     if(audio){
         audio.play();
-        console.log(audio.src)
-    }
+        string.innerText = 'You Played ' + audio.title;
+    }   
     else{
         console.log('No Audio.')
     }
-    
-    
 }
 
 const getKey = () => {
@@ -62,21 +60,16 @@ const getKey = () => {
             playAudio("C")
         }
         else{
-            console.log('pressed key....')
+            console.log('Must choose from the following keys: \n Q, W, E, A, S, D, Z, X, C')
         }
     })
 }
 
-// let audio = document.getElementById("Q");
-// console.log(audio);
-// audio.addEventListener("click", () => {
-//     audio.play();
-// })
-
 
     return (
         <div id="drum-machine" >
-            <div id="display">
+            <div id="display"></div>
+                <div id="drum-pad-display">
                 <div  className="drum-pad" id="open-hat" onClick={() => playAudio("Q")}  >
                     <span className="key">Q</span>
                     <audio title="Open Hat" className="clip" id="Q" src={openHat} />

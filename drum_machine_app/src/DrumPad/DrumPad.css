@@ -8,6 +8,13 @@
 }
 
 #display{
+    position: absolute;
+    top: -10%;
+    left: 25%;
+
+}
+
+#drum-pad-display{
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
     width: 100%;
@@ -39,5 +46,22 @@
 @media only screen and (max-width: 500px){
     .key{
         top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    #display{
+        left: 25%;
+    }
+}
+@media only screen and (min-width: 950px){
+    #display{
+        left: 37%;
+    }
+}
+
+@media only screen and (min-width: 1550px){
+    #display{
+        left: 40%;
     }
 }
