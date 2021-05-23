@@ -60,8 +60,6 @@ const getKey = () => {
         else{
             console.log('pressed key....')
         }
-
-
     })
 }
 
@@ -70,45 +68,48 @@ const getKey = () => {
         <div id="drum-machine" onKeyPress={onKeyDown}>
             <div id="display">
                 <div  className="drum-pad" id="drum-pad-1" onClick={() => playAudio(openHat)}  >
-                    <span></span>
-                    <span>Q</span>
+                    <p className="drum-selection">Open Hat</p>
+                    <span className="key">Press Q</span>
                     <audio className="clip" id="Q" src={openHat} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-2" onClick={() => playAudio(kickAcoustic)}  >
-                    <span></span>
-                    <span>Q</span>
+                    <span className="drum-selection"></span>
+                    <span className="key">Q</span>
                     <audio className="clip" id="Q" src={kickAcoustic} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-3" onClick={() => playAudio(hiHat808)}  >
-                    <span></span>
-                    <span>Q</span>
+                    <span className="drum-selection"></span>
+                    <span className="key">Q</span>
                     <audio className="clip" id="Q" src={hiHat808} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-4" onClick={() => playAudio(snare808)}  >
-                    <span></span>
-                    <span>Q</span>
+                    <span className="drum-selection"></span>
+                    <span className="key">Q</span>
                     <audio className="clip" id="Q" src={snare808} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-5" onClick={() => playAudio(perc808)}  >
-                    <span></span>
-                    <span>Q</span>
+                    <span className="drum-selection"></span>
+                    <span className="key">Q</span>
                     <audio className="clip" id="Q" src={perc808} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-6" onClick={() => playAudio(kickElectro)}  >
-                <span></span>
-                    <span>Q</span>
+                    <span className="drum-selection"></span>
+                    <span className="key">Q</span>
                     <audio className="clip" id="Q" src={kickElectro} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-7" onClick={() => playAudio(kickTape)}  >
-                    Z
+                    <span className="drum-selection"></span>
+                    <span className="key">Q</span>
                     <audio className="clip" id="Q" src={kickTape} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-8" onClick={() => playAudio(kickOldSchool)}  >
-                    X
+                    <span className="drum-selection"></span>
+                    <span className="key">Q</span>
                     <audio className="clip" id="Q" src={kickOldSchool} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-9" onClick={() => playAudio(kickThump)}  >
-                    C
+                    <span className="drum-selection"></span>
+                    <span className="key">Q</span>
                     <audio className="clip" id="Q" src={kickThump} />
                 </div>
             </div>
