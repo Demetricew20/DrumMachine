@@ -73,44 +73,44 @@ const getKey = () => {
                     <audio className="clip" id="Q" src={openHat} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-2" onClick={() => playAudio(kickAcoustic)}  >
-                    <span className="drum-selection"></span>
-                    <span className="key">Q</span>
-                    <audio className="clip" id="Q" src={kickAcoustic} />
+                    <p className="drum-selection">Kick Acoustic</p>
+                    <span className="key">Press W</span>
+                    <audio className="clip" id="W" src={kickAcoustic} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-3" onClick={() => playAudio(hiHat808)}  >
-                    <span className="drum-selection"></span>
-                    <span className="key">Q</span>
-                    <audio className="clip" id="Q" src={hiHat808} />
+                    <p className="drum-selection">Hi Hat</p>
+                    <span className="key">Press E</span>
+                    <audio className="clip" id="E" src={hiHat808} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-4" onClick={() => playAudio(snare808)}  >
-                    <span className="drum-selection"></span>
-                    <span className="key">Q</span>
+                    <p className="drum-selection">Snare 808</p>
+                    <span className="key">Press A</span>
                     <audio className="clip" id="Q" src={snare808} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-5" onClick={() => playAudio(perc808)}  >
-                    <span className="drum-selection"></span>
-                    <span className="key">Q</span>
-                    <audio className="clip" id="Q" src={perc808} />
+                    <p className="drum-selection">Perc 808</p>
+                    <span className="key">Press S</span>
+                    <audio className="clip" id="S" src={perc808} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-6" onClick={() => playAudio(kickElectro)}  >
-                    <span className="drum-selection"></span>
-                    <span className="key">Q</span>
-                    <audio className="clip" id="Q" src={kickElectro} />
+                    <p className="drum-selection">Kick Electro</p>
+                    <span className="key">Press D</span>
+                    <audio className="clip" id="D" src={kickElectro} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-7" onClick={() => playAudio(kickTape)}  >
-                    <span className="drum-selection"></span>
-                    <span className="key">Q</span>
-                    <audio className="clip" id="Q" src={kickTape} />
+                    <p className="drum-selection">Kick Tape</p>
+                    <span className="key">Press Z</span>
+                    <audio className="clip" id="Z" src={kickTape} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-8" onClick={() => playAudio(kickOldSchool)}  >
-                    <span className="drum-selection"></span>
-                    <span className="key">Q</span>
-                    <audio className="clip" id="Q" src={kickOldSchool} />
+                    <p className="drum-selection">Kick Old School</p>
+                    <span className="key">Press X</span>
+                    <audio className="clip" id="X" src={kickOldSchool} />
                 </div>
                 <div  className="drum-pad" id="drum-pad-9" onClick={() => playAudio(kickThump)}  >
-                    <span className="drum-selection"></span>
-                    <span className="key">Q</span>
-                    <audio className="clip" id="Q" src={kickThump} />
+                    <p className="drum-selection">Kick Thump</p>
+                    <span className="key">Press C</span>
+                    <audio className="clip" id="C" src={kickThump} />
                 </div>
             </div>
         </div>
