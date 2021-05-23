@@ -29,10 +29,6 @@
     border: 1px solid black;
 }
 
-#drum-pad-1{
-    background-color: green;
-}
-
 .drum-selection{    
     padding: 0;
     margin-top: 2rem;

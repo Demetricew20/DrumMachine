@@ -11,53 +11,52 @@ import perc808 from '../Assets/DrumSamples/perc-808.wav';
 import snare808 from '../Assets/DrumSamples/snare-808.wav';
 
 const DrumPad = () => {
-    const [keys, setKeys] = useState(["Q", "W", "E", "A", "S", "D", "Z", "X", "C"]);
     const [audioSource, setAudioSource] = useState([
-        {KickOldSchool: {
+        {
             name: 'Kick OldSchool',
             key: "Q",
             src: kickOldSchool
-        }},
-        {KickAcoustic: {
+        },
+        {
             name: 'Kick Acoustic',
             key: "W",
             src: kickAcoustic
-        }},
-        {HiHat808: {
+        },
+        {
             name: 'Hi Hat808',
             key: "E",
             src: hiHat808
-        }},
-        {KickElectro: {
+        },
+        {
             name: 'Kick Electro',
             key: "A",
             src: kickElectro
-        }},
-        {Tom808: {
+        },
+        {
             name: 'Tom808',
             key: "S",
             src: tom808
-        }},
-        {KickThump: {
+        },
+        {
             name: 'Kick Thump',
             key: "D",
             src: kickThump
-        }},
-        {OpenHat: {
+        },
+        {
             name: 'Open Hat',
             key: "Z",
             src: kickOldSchool
-        }},
-        {Perc808: {
+        },
+        {
             name: 'Perc808',
             key: "X",
             src: perc808
-        }},
-        {Snare808: {
+        },
+        {
             name: 'Snare808',
             key: "C",
-            snare808
-        }},
+            src: snare808
+        },
 
 
     ])
@@ -116,60 +115,25 @@ const getKey = () => {
 }
 
 const mapDrumPads = () => {
-    keys.map((key, i) => {
-        return (
-            <div  className="drum-pad" id={`audio${key}`} onClick={() => playAudio(key)}  >
-                    <span className="key">{key}</span>
-                    <audio title="Open Hat" className="clip" id={key} src={openHat} />
-            </div>
-        )
-    })
+    return(
+        audioSource.map((source, i) => {
+            return (
+                <div key={i} className="drum-pad" id={`audio${i}`} onClick={() => playAudio(source.key)}   >
+                <span className="key">{source.key}</span>
+                        <audio title={source.name} className="clip" id={source.key} src={source.src} />
+                </div>
+                )  
+        })
+    )
 }
-
-
 
 
     return (
         <div id="drum-machine" >
             <div id="display"></div>
                 <div id="drum-pad-display">
-                <div  className="drum-pad" id="open-hat" onClick={() => playAudio("Q")}  >
-                    <span className="key">Q</span>
-                    <audio title="Open Hat" className="clip" id="Q" src={openHat} />
+                    {mapDrumPads()}
                 </div>
-                <div  className="drum-pad" id="kick-acoustic" onClick={() => playAudio("W")}   >
-                    <span className="key">W</span>
-                    <audio title="Kick Acoustic" className="clip" id="W" src={kickAcoustic} />
-                </div>
-                <div  className="drum-pad" id="hi-hat" onClick={() => playAudio("E")}  >
-                    <span className="key">E</span>
-                    <audio title="Hi Hat808" className="clip" id="E" src={hiHat808} />
-                </div>
-                <div  className="drum-pad" id="snare-808" onClick={() => playAudio("A")}  >
-                    <span className="key">A</span>
-                    <audio title="Snare808" className="clip" id="A" src={snare808} />
-                </div>
-                <div  className="drum-pad" id="perc-808" onClick={() => playAudio("S")} >
-                    <span className="key">S</span>
-                    <audio title="Perc808" className="clip" id="S" src={perc808} />
-                </div>
-                <div  className="drum-pad" id="kick-electro" onClick={() => playAudio("D")} >
-                    <span className="key">D</span>
-                    <audio title="Kick Electro" className="clip" id="D" src={kickElectro} />
-                </div>
-                <div  className="drum-pad" id="kick-tape" onClick={() => playAudio("Z")} >
-                    <span className="key">Z</span>
-                    <audio title="Tom808" className="clip" id="Z" src={tom808} />
-                </div>
-                <div  className="drum-pad" id="kick-old-school" onClick={() => playAudio("X")}  >
-                    <span className="key">X</span>
-                    <audio title="Kick OldSchool" className="clip" id="X" src={kickOldSchool}  />
-                </div>
-                <div  className="drum-pad" id="kick-thump" onClick={() => playAudio("C")}  >
-                    <span className="key">C</span>
-                    <audio title="Kick Thump" className="clip" id="C" src={kickThump} />
-                </div>
-            </div>
         </div>
     )
 }
