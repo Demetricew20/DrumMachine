@@ -11,6 +11,56 @@ import perc808 from '../Assets/DrumSamples/perc-808.wav';
 import snare808 from '../Assets/DrumSamples/snare-808.wav';
 
 const DrumPad = () => {
+    const [keys, setKeys] = useState(["Q", "W", "E", "A", "S", "D", "Z", "X", "C"]);
+    const [audioSource, setAudioSource] = useState([
+        {KickOldSchool: {
+            name: 'Kick OldSchool',
+            key: "Q",
+            src: kickOldSchool
+        }},
+        {KickAcoustic: {
+            name: 'Kick Acoustic',
+            key: "W",
+            src: kickAcoustic
+        }},
+        {HiHat808: {
+            name: 'Hi Hat808',
+            key: "E",
+            src: hiHat808
+        }},
+        {KickElectro: {
+            name: 'Kick Electro',
+            key: "A",
+            src: kickElectro
+        }},
+        {Tom808: {
+            name: 'Tom808',
+            key: "S",
+            src: tom808
+        }},
+        {KickThump: {
+            name: 'Kick Thump',
+            key: "D",
+            src: kickThump
+        }},
+        {OpenHat: {
+            name: 'Open Hat',
+            key: "Z",
+            src: kickOldSchool
+        }},
+        {Perc808: {
+            name: 'Perc808',
+            key: "X",
+            src: perc808
+        }},
+        {Snare808: {
+            name: 'Snare808',
+            key: "C",
+            snare808
+        }},
+
+
+    ])
 
     useEffect(() => {
         getKey();
@@ -64,6 +114,19 @@ const getKey = () => {
         }
     })
 }
+
+const mapDrumPads = () => {
+    keys.map((key, i) => {
+        return (
+            <div  className="drum-pad" id={`audio${key}`} onClick={() => playAudio(key)}  >
+                    <span className="key">{key}</span>
+                    <audio title="Open Hat" className="clip" id={key} src={openHat} />
+            </div>
+        )
+    })
+}
+
+
 
 
     return (
